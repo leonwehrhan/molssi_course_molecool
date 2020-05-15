@@ -60,12 +60,6 @@ Namespaces are one honking great idea -- let's do more of those!'''
         quote += "\n\t- Tim Peters"
     return quote
 
-def calculate_distance(rA, rB):
-    # This function calculates the distance between two points given as numpy arrays.
-    d=(rA-rB)
-    dist=np.linalg.norm(d)
-    return dist
-
 def open_pdb(f_loc):
     # This function reads in a pdb file and returns the atom names and coordinates.
     with open(f_loc) as f:
@@ -135,18 +129,6 @@ def draw_molecule(coordinates, symbols, draw_bonds=None, save_location=None, dpi
         plt.savefig(save_location, dpi=dpi, graph_min=0, graph_max=2)
 
     return ax
-
-def calculate_angle(rA, rB, rC, degrees=False):
-    # Calculate the angle between three points. Answer is given in radians by default, but can be given in degrees
-    # by setting degrees=True
-    AB = rB - rA
-    BC = rB - rC
-    theta=np.arccos(np.dot(AB, BC)/(np.linalg.norm(AB)*np.linalg.norm(BC)))
-
-    if degrees:
-        return np.degrees(theta)
-    else:
-        return theta
 
 def bond_histogram(bond_list, save_location=None, dpi=300, graph_min=0, graph_max=2):
     # Draw a histogram of bond lengths based on a bond_list (output from build_bond_list function)
