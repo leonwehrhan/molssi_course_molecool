@@ -9,6 +9,8 @@ from .molecule import build_bond_list
 from .measure import calculate_distance, calculate_angle
 from .visualize import draw_molecule, bond_histogram
 from .atom_data import atomic_weights, atom_colors
+from .io import open_pdb, open_xyz, write_xyz
+#import molecool.io
 
 # Handle versioneer
 from ._version import get_versions
