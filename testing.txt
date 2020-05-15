@@ -1,3 +1,7 @@
 I added this file from a new clone. 123 test test
 
 Different line.
+
+******************************
+This is the end of testing.txt
+******************************
