@@ -27,6 +27,9 @@ def build_bond_list(coordinates, max_bond=1.5, min_bond=0):
 
     '''
 
+    if min_bond < 0:
+        raise ValueError(f'{min_bond} entered for minimum bond length.Minimum bond length cannot be less than zero!')
+
     # Find the bonds in a molecule (set of coordinates) based on distance criteria.
     bonds = {}
     num_atoms = len(coordinates)
