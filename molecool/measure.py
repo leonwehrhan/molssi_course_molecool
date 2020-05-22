@@ -33,8 +33,8 @@ def calculate_distance(rA, rB):
 
     d=(rA-rB)
     dist=np.linalg.norm(d)
-    if dist == 0:
-        raise Exception('Two atoms are located in the same point.')
+    #if dist == 0:
+        #raise Exception('Two atoms are located in the same point.')
     return dist
 
 def calculate_angle(rA, rB, rC, degrees=False):
