@@ -2,7 +2,9 @@
 Functions associated with a molecule.
 '''
 
+import numpy as np
 from .measure import calculate_distance
+from .atom_data import atomic_weights
 
 
 def build_bond_list(coordinates, max_bond=1.5, min_bond=0):
@@ -43,7 +45,8 @@ def build_bond_list(coordinates, max_bond=1.5, min_bond=0):
     return bonds
 
 def calculate_molecular_mass(symbols):
-   """Calculate the mass of a molecule.
+   '''
+   Calculate the mass of a molecule.
 
    Parameters
    ----------
@@ -54,6 +57,12 @@ def calculate_molecular_mass(symbols):
    -------
    mass : float
        The mass of the molecule
-   """
-   pass
+   '''
+   weights = np.zeros(len(symbols))
 
+   for i, s in enumerate(symbols):
+       w = atomic_weights[s]
+       weights[i] = w
+
+   mol_weight = np.sum(weights)
+   return mol_weight
