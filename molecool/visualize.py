@@ -7,11 +7,15 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 from mpl_toolkits.mplot3d import Axes3D
+from .atom_data import atom_colors
 
 
 def draw_molecule(coordinates, symbols, draw_bonds=None, save_location=None, dpi=300):
 
     # Draw a picture of a molecule using matplotlib.
+
+    if len(coordinates) != len(symbols):
+        raise ValueError(f'molecool.draw_molecule - unequal number of coordinates ({len(coordinates)}) and symbols ({len(symbols)})')
 
     # Create figure
     fig = plt.figure()
