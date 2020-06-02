@@ -68,7 +68,7 @@ def calculate_molecular_mass(symbols):
    return mol_weight
 
 def calculate_center_of_mass(symbols, coordinates):
-   """Calculate the center of mass of a molecule.
+   '''Calculate the center of mass of a molecule.
 
    The center of mass is weighted by each atom's weight.
 
@@ -90,7 +90,7 @@ def calculate_center_of_mass(symbols, coordinates):
 
    .. math:: \\vec{R}=\\frac{1}{M} \\sum_{i=1}^{n} m_{i}\\vec{r_{}i}
 
-   """
+   '''
 
    total_mass = calculate_molecular_mass(symbols)
 
