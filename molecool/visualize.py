@@ -11,8 +11,22 @@ from .atom_data import atom_colors
 
 
 def draw_molecule(coordinates, symbols, draw_bonds=None, save_location=None, dpi=300):
+    '''
+    Draw a picture of a molecule using Matplotlib.
 
-    # Draw a picture of a molecule using matplotlib.
+    Parameters
+    ----------
+    coordinates : np.ndarray
+        Coordinates of each atom as a 2D numpy array.
+    symbols : list
+        Element symbols for each atom.
+    draw_bonds : dict
+        Bonds to draw. Tuple of the two atoms index in coordinates as keys, bond length as value. Default None.
+    save_location : str
+        Location where the image of the drawn molecule is saved. Default None.
+    dpi : int
+        Resolution of the saved image file. Only applies if save_location is provided. Default 300.
+    '''
 
     if len(coordinates) != len(symbols):
         raise ValueError(f'molecool.draw_molecule - unequal number of coordinates ({len(coordinates)}) and symbols ({len(symbols)})')
