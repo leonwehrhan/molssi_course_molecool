@@ -4,6 +4,7 @@ Unit and regression test for the molecule module
 
 import molecool
 import numpy as np
+import pytest
 
 def test_build_bond_list():
     coordinates = np.array([
