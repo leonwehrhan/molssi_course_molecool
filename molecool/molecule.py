@@ -41,3 +41,19 @@ def build_bond_list(coordinates, max_bond=1.5, min_bond=0):
                 bonds[(atom1, atom2)] = distance
 
     return bonds
+
+def calculate_molecular_mass(symbols):
+   """Calculate the mass of a molecule.
+
+   Parameters
+   ----------
+   symbols : list
+       A list of elements.
+
+   Returns
+   -------
+   mass : float
+       The mass of the molecule
+   """
+   pass
+
