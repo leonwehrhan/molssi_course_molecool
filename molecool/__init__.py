@@ -5,7 +5,7 @@ A Python package for analyzing and visualizing pdb and xyz files. For MolSSI May
 
 # Add imports here
 from .functions import *
-from .molecule import build_bond_list, calculate_molecular_mass
+from .molecule import build_bond_list, calculate_molecular_mass, calculate_center_of_mass
 from .measure import calculate_distance, calculate_angle
 from .visualize import draw_molecule, bond_histogram
 from .atom_data import atomic_weights, atom_colors
