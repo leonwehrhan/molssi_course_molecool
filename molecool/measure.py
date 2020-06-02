@@ -62,3 +62,30 @@ def build_bond_list(coordinates, max_bond=1.5, min_bond=0):
                 bonds[(atom1, atom2)] = distance
 
     return bonds
+
+def calculate_center_of_mass(symbols, coordinates):
+   """Calculate the center of mass of a molecule.
+
+   The center of mass is weighted by each atom's weight.
+
+   Parameters
+   ----------
+   symbols : list
+       A list of elements for the molecule
+   coordinates : np.ndarray
+       The coordinates of the molecule.
+
+   Returns
+   -------
+   center_of_mass: np.ndarray
+       The center of mass of the molecule.
+
+   Notes
+   -----
+   The center of mass is calculated with the formula
+
+   .. math:: \\vec{R}=\\frac{1}{M} \\sum_{i=1}^{n} m_{i}\\vec{r_{}i}
+
+   """
+
+   return np.array([])
