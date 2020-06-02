@@ -38,6 +38,21 @@ def calculate_distance(rA, rB):
     return dist
 
 def calculate_angle(rA, rB, rC, degrees=False):
+    '''
+    Calculate the angle between three points.
+
+    Parameters
+    ----------
+    rA, rB, rC : np.ndarray
+        Coordinate of each point of the angle ABC.
+    degrees : bool
+        If False (default), result is given in radians. If True, result is given in degrees.
+
+    Returns
+    -------
+    theta : float
+        Angle ABC in radians (default) or degrees if specified.
+    '''
     # Calculate the angle between three points. Answer is given in radians by default, but can be given in degrees
     # by setting degrees=True
     AB = rB - rA
