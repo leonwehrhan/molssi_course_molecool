@@ -26,6 +26,11 @@ def draw_molecule(coordinates, symbols, draw_bonds=None, save_location=None, dpi
         Location where the image of the drawn molecule is saved. Default None.
     dpi : int
         Resolution of the saved image file. Only applies if save_location is provided. Default 300.
+
+    Returns
+    -------
+    ax : matplotlib.axes.Axes3D
+        3D-Axes object containing the molecule image.
     '''
 
     if len(coordinates) != len(symbols):
