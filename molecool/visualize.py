@@ -21,7 +21,7 @@ def draw_molecule(coordinates, symbols, draw_bonds=None, save_location=None, dpi
     symbols : list
         Element symbols for each atom.
     draw_bonds : dict
-        Bonds to draw. Tuple of the two atoms index in coordinates as keys, bond length as value. Default None.
+        Bond_list of bonds to draw. Tuple of the two atoms index in coordinates as keys, bond length as value. Default None.
     save_location : str
         Location where the image of the drawn molecule is saved. Default None.
     dpi : int
@@ -61,8 +61,27 @@ def draw_molecule(coordinates, symbols, draw_bonds=None, save_location=None, dpi
     return ax
 
 def bond_histogram(bond_list, save_location=None, dpi=300, graph_min=0, graph_max=2):
-    # Draw a histogram of bond lengths based on a bond_list (output from build_bond_list function)
+    '''
+    Draw a histogram of bond lengths based on a bond_list (output from build_bond_list function)
 
+    Parameters
+    ----------
+    bond_list : dict
+        Keys are tuples of atom bond indices. Values are bond lengths.
+    save_location : str
+        Location where the image of the drawn molecule is saved. Default None.
+    dpi : int
+        Resolution of the saved image file. Only applies if save_location is provided. Default 300.
+    graph_min : float
+        Minumum of the histogram bin range. Default 0.
+    graph_max : float
+        Maximum of the histogram bin range. Default 2.
+
+    Returns
+    -------
+    ax : matplotlib.axes.Axes
+        Axes object containing the bond histogram.
+    '''
 
     lengths = []
     for atoms, bond_length in bond_list.items():
